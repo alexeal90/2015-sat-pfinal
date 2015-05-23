@@ -1,0 +1,62 @@
+
+<!doctype html>
+
+<html lang="es">
+      
+<head> 
+     <meta charset="UTF-8" />
+     <title>the app</title>
+    <link href="css/index.css" rel="stylesheet">
+</head>
+    <div>
+        <img ALIGN=right id = "banner" src="http://cdnb.20m.es/cronicaverde/files/gray-wolf-snow-513254-lw.jpg" />
+        
+    </div>
+    {% if user %}
+    <div> 
+        <p ALIGN=left><h4>{{user}}</h4><a href="/logout"></h3>salir</a></h3></p>
+    </div>
+     {% endif %}
+    
+    <body background="http://sergimateo.com/wp-content/2012/01/fondo-madera-negro.jpg" >   
+          <div id = "content-menu">
+             <nav> 
+               <ul class = "menu">
+                  <li><a href="/todas">Todas</a></li>
+                  <li><a href="/ayuda">Ayuda</a></li>                
+              </ul>
+            </nav> 
+        	</div>
+      
+          <br><br>
+          
+          <div align = right>
+                <p>
+                  <h2>USUARIOS REGISTRADOS</h2>
+                </p>
+                <p> 
+                    {{listado|safe}}
+               </p>             
+            </div> <br>
+         
+          <div align = center>
+          	  		<font color=blue size=6>Hola :)</font>
+          </div><br><br>   
+           
+           <div align="center">
+                   
+                       {{respuesta|safe}}
+                  
+            </div>
+             <br> <br>
+              
+
+            <hr>  
+          <div id="pie"  >
+                 <p align = center> 
+                    miau miau miau miau miau
+                  </p>   
+           </div>         
+    </body>
+
+    </hmtl>

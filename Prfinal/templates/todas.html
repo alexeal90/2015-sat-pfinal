@@ -1,0 +1,64 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+<title>BuscadorAPP</title>
+<LINK REL=StyleSheet HREF="css/style2.css" TYPE="text/css" MEDIA=screen>
+</head>
+
+<body style="background-color:{{colBack|safe}};color:{{colLet|safe}};">
+
+<div id="page">
+	<div>
+		<p>
+			<h2 style="padding-left: 600px;">{{user|safe}}</h2>
+		</p>         
+	</div>
+	<div id="menulinks">
+		<a href="/">HOME</a>
+		<div class="menuline"></div>
+		<a href="/ayuda" >AYUDA</a>
+		<div class="menuline"></div>
+		<a href="/todas">TODAS</a>
+		<div class="menuline"></div>
+	</div>	
+	
+	<div id="header">
+			<h1><a href="/">BuscadorAPP</a></h1>
+			<div class="description">Buscador de Actividades</div>
+			<div style="padding-left: 550px;">{{nAct}}</div>
+			<div style="padding-left: 550px;">{{hora}}</div>
+	</div>
+	
+	<div id="mainarea">
+	<div id="contentarea">
+		<h2>Todas las actividades</h2>
+		<br><br>
+			{{recurso|safe}}
+		<br><br>
+	</div>
+	
+	<div id="sidebar">
+		{{actualiza|safe}}
+		<br/><br/>
+		<h2>Otras formas de ordenar las actividades</h2>
+		<br/><br/>
+		{{form|safe}}
+		<br/><br/>
+		<br/><br/>
+		<br/><br/>
+		<strong></strong>
+	</div></div>
+	
+	<div id="footer">
+		Designed by <a href="http://www.free-css-templates.com/">Free CSS Templates</a>. Developed by <a href="https://github.com/alexeal90">Alejandro Valeriano Fernández</a>
+	</div>
+
+
+</div>
+
+</body>
+
+</html>

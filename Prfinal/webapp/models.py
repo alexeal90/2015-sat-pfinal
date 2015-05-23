@@ -1,0 +1,28 @@
+from django.db import models
+
+# Create your models here.
+
+class Actividade(models.Model):
+	title = models.CharField(max_length = 30)
+	kind = models.CharField(max_length = 30)
+	price = models.CharField(max_length = 30)
+	date = models.CharField(max_length = 30)
+	length = models.CharField(max_length = 30)
+	toolong = models.CharField(max_length = 30)
+	url = models.CharField(max_length = 30)
+	start = models.CharField(max_length = 30)
+
+class Usuario(models.Model):
+	name = models.CharField(primary_key=True, max_length = 30)
+	event = models.CharField(max_length=30)
+	actividades = models.ManyToManyField(Actividade)
+	fondo = models.CharField(max_length=30)
+	letra = models.CharField(max_length=30)
+
+	def __str__(self):
+		return self.name
+
+class FechAdd(models.Model):
+    fecha = models.DateTimeField()
+    usuario = models.ForeignKey(Usuario)
+    actividad = models.ForeignKey(Actividade)
